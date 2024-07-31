@@ -8,7 +8,7 @@ const inputs = document.getElementsByTagName("input");
 
 const celsiusTofFunction = function () {
   const celsius = celsiusInput.value;
-  if (celsius !== "") {
+  if (parseFloat(celsius) !== "") {
     const fahrenheit = (celsius * 9) / 5 + 32;
     resultDisplay.innerText = `${celsius}°C is ${fahrenheit.toFixed(1)}°F`;
     celsiusInput.value = "";
@@ -21,7 +21,7 @@ const celsiusTofFunction = function () {
 
 const fahrenheitTocFunction = function () {
   const fahrenheit = fahrenheitInput.value;
-  if (fahrenheit !== "") {
+  if (parseFloat(fahrenheit) !== "") {
     const celsius = ((fahrenheit - 32) * 5) / 9;
     resultDisplay.innerText = `${fahrenheit}°F is ${celsius.toFixed(1)}°C`;
     fahrenheitInput.value = "";
